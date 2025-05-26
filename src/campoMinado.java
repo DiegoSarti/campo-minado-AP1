@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
 import java.util.Random;
-public class Main
+public class campoMinado
 {
 	public static void main(String[] args) {
 	   //Scanner 
