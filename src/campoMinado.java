@@ -31,6 +31,7 @@ public class campoMinado
 
 			break;
 			case 2:
+			mostrarTutorial();
 
 			break;
 
@@ -43,6 +44,35 @@ public class campoMinado
 		input.close();    
 		
 	}
+	
+	public static void mostrarTutorial() {
+    System.out.println("========== TUTORIAL DO CAMPO MINADO ==========");
+    System.out.println("Seu objetivo é revelar todas as células do campo");
+    System.out.println("que NÃO contêm minas. Use lógica e atenção!");
+    System.out.println();
+    System.out.println("Regras Básicas:");
+    System.out.println("1️⃣ O campo é uma grade com várias células.");
+    System.out.println("2️⃣ Algumas células escondem minas (💣).");
+    System.out.println("3️⃣ Ao selecionar uma célula:");
+    System.out.println("   ➤ Se houver uma mina: FIM DE JOGO!");
+    System.out.println("   ➤ Se estiver vazia, será revelada.");
+    System.out.println("   ➤ Se houver um número, ele indica quantas minas");
+    System.out.println("      estão nas 8 células ao redor.");
+    System.out.println();
+    System.out.println("Comandos do jogo:");
+    System.out.println("👉 Para REVELAR uma célula: informe a linha e a coluna.");
+    System.out.println();
+    System.out.println("Dicas:");
+    System.out.println("- Comece revelando cantos ou áreas com mais espaço.");
+    System.out.println("- Use os números revelados para deduzir onde estão as minas.");
+    System.out.println("- Evite chutar! Use a lógica sempre que possível.");
+    System.out.println();
+    System.out.println("🎯 Vence o jogo quem revelar todas as células seguras!");
+    System.out.println("===============================================");
+    System.out.println("Boa sorte, e que sua mente seja mais afiada que as minas!");
+}
+
+	
 	
 	public static void começarJogo(){
 
