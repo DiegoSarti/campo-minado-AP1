@@ -1,2 +1,2 @@
 # campo-minado-AP1
-Jogo campo mineiro
+Jogo Campo minado 

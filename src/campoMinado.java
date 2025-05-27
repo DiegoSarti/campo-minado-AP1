@@ -35,22 +35,31 @@ public class campoMinado
 
 		switch (opcao) {
 			case 1:
-			começarJogo();
-
-			break;
+				começarJogo();
+				break;
 			case 2:
-			mostrarTutorial();
-
-			break;
-
+				mostrarTutorial();
+				break;
 			case 3:
-			break;
+				mostrarCreditos();
+				break;
+			case 4:
+				System.out.println("Saindo do jogo...");
+				break;
 			default:
 			System.out.println("Opção invalida!");
 			break;
 		}	
 		input.close();    
 		
+	}
+
+	public static void mostrarCreditos(){
+	System.out.println("========== CREDITOS ===========");
+	System.out.println("Desenvolvido por\nDiego Sarti\nLucas Soares\nRenato dos Santos");
+	mostrarMenu();
+
+
 	}
 	
 	public static void mostrarTutorial() {
@@ -78,6 +87,7 @@ public class campoMinado
     System.out.println("🎯 Vence o jogo quem revelar todas as células seguras!");
     System.out.println("===============================================");
     System.out.println("Boa sorte, e que sua mente seja mais afiada que as minas!");
+	mostrarMenu();
 }
 
 	
