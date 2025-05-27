@@ -7,9 +7,51 @@ public class campoMinado
 	public static void main(String[] args) {
 	   //Scanner 
 	    Scanner input = new Scanner(System.in);
+	   	
+
+		//menu do jogo 
+		System.out.println("\r\n" + //
+						" #######  #######  #     #  #######  #######           #     #     #     #     #  #######  ######   #######\r\n" + //
+						" #        #     #  ##   ##  #     #  #     #           ##   ##     #     ##    #  #     #  #     #  #     #\r\n" + //
+						" #        #######  # # # #  #######  #     #           # # # #     #     # ### #  #######  #     #  #     #\r\n" + //
+						" #        #     #  #  #  #  #        #     #           #  #  #     #     #    ##  #     #  #     #  #     #\r\n" + //
+						" #######  #     #  #     #  #        #######           #     #     #     #     #  #     #  ######   #######\r\n" + //
+						"\r\n" + //
+						"");
+		System.out.println("1 - Começar o jogo");
+		System.out.println("2 - Instruções");
+		System.out.println("3 - Sair");
+		System.out.print("Informe a opção: ");
+		int opcao = input.nextInt();
+
+		switch (opcao) {
+			case 1:
+			começarJogo();
+
+			break;
+			case 2:
+
+			break;
+
+			case 3:
+			break;
+			default:
+			System.out.println("Opção invalida!");
+			break;
+		}	
+		input.close();    
+		
+	}
+	
+	public static void começarJogo(){
+
+		//Scanner 
+	    Scanner input = new Scanner(System.in);
 	    //random
-        Random sorteio = new Random();	   
-	   //Variáveis do jogador, recebe a linah e coluna do jogador
+        Random sorteio = new Random();
+
+		
+		//Variáveis do jogador, recebe a linha e coluna do jogador
 	    int escolheLinha = 0;
 	    int escolheColuna = 0;
 	    int linhaMinas=0;
@@ -75,6 +117,7 @@ public class campoMinado
         		                System.out.println("Bumm!");
         		                System.out.println("Você acertou a Mina!");
                                 System.out.println();
+								System.out.println("**Campo Minado***");
         		                System.out.println("Linha|__________");
 		                        for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
 		                       System.out.print(linhaMinas + "     | ");
@@ -123,9 +166,10 @@ public class campoMinado
         		            
         		
 	}while(true);
-	    
-		
+	input.close();
+
 	}
+
 }
 
 
