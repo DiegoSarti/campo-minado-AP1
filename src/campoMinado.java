@@ -47,7 +47,7 @@ public class campoMinado
 
 		//Scanner 
 	    Scanner input = new Scanner(System.in);
-	    //random
+	    //random para escoler os números
         Random sorteio = new Random();
 
 		
@@ -62,9 +62,8 @@ public class campoMinado
 	        int [][] campoMinas = new int [5][5];
 	        
 	          
-	          ///testar minas.
-	        
-	       
+	    
+			///testar minas.     
 	      // System.out.println("Minas|__________");
 		    for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
 		   // System.out.print(linhaMinas + "     | ");
