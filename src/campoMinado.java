@@ -3,8 +3,16 @@
 import java.util.Scanner;
 import java.util.Random;
 public class campoMinado
-{
+{	
+	// Main principal 
 	public static void main(String[] args) {
+		mostrarMenu();
+	}
+
+
+
+
+	public static void mostrarMenu(){
 	   //Scanner 
 	    Scanner input = new Scanner(System.in);
 	   	
@@ -198,7 +206,7 @@ public class campoMinado
 	}while(true);
 	input.close();
 
-	}
+}
 
 }
 
