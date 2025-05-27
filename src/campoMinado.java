@@ -20,7 +20,8 @@ public class campoMinado
 						"");
 		System.out.println("1 - Começar o jogo");
 		System.out.println("2 - Instruções");
-		System.out.println("3 - Sair");
+		System.out.println("3 - Créditos");
+		System.out.println("4 - Sair");
 		System.out.print("Informe a opção: ");
 		int opcao = input.nextInt();
 
