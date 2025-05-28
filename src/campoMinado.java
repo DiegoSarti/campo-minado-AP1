@@ -232,7 +232,16 @@ public class campoMinado
 										//final do jogo no momento que o jogador terminou a roda.
 													
 										if(tentativa == minas){
-											  	System.out.println();
+											System.out.println("\r\n" + //
+											"  #####      ##     #####      ##     #####    ######   ##  ##    ####\r\n" + //
+											"  ##  ##    ####    ##  ##    ####    ##  ##   ##       ### ##   ##  ##\r\n" + //
+											"  ##  ##   ##  ##   ##  ##   ##  ##   ##  ##   ##       ######   ##\r\n" + //
+											"  #####    ######   #####    ######   #####    ####     ######    ####\r\n" + //
+											"  ##       ##  ##   ####     ##  ##   ##  ##   ##       ## ###       ##\r\n" + //
+											"  ##       ##  ##   ## ##    ##  ##   ##  ##   ##       ##  ##   ##  ##\r\n" + //
+											"  ##       ##  ##   ##  ##   ##  ##   #####    ######   ##  ##    ####\r\n" + //
+											"\r\n" + //
+											"");
 								
 												    System.out.println("");	
 													System.out.println("");		
