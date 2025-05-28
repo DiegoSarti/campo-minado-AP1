@@ -258,7 +258,7 @@ public class campoMinado
 													System.out.println("        0 1 2 3 4 Colunas");
 											
 										}//fim if
-										mostrarMenu();
+										
 }//fim da void começar jogo
 
 }//fim da classe jogo
