@@ -105,6 +105,7 @@ public class campoMinado
 	    int escolheColuna = 0;
 	    int linhaMinas=0;
 	    int colunaMinas=0;
+		int tentativa = 0;
 	    
 	    //inicia o a matriz Campo que será mostrador
 	        int [][] campoExibir = new int [5][5];
@@ -112,7 +113,7 @@ public class campoMinado
 	        
 	          
 	    
-			///testar minas.     
+		///testar minas, retirando o comentário o aparece o campo com as minas sorteadas     
 	      // System.out.println("Minas|__________");
 		    for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
 		   // System.out.print(linhaMinas + "     | ");
@@ -122,17 +123,32 @@ public class campoMinado
 		        
 		        
 		      //  System.out.print(campoMinas[linhaMinas][colunaMinas] + " ");
-		    }
+		    }//fim for colunas
 		   // System.out.println(" ");
-		}
+		}//fim for linhas
         	//	System.out.println("        _________        ");
         	//	System.out.println("        0 1 2 3 4 Colunas");
 	        
-	        
-	        
+	
+	
+	//Encontra as bombas onde, corresponde ao núemro 4
+		   
+		   int minas = 0;
+		   for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
+		  
+		   for(colunaMinas=0;colunaMinas<campoMinas[linhaMinas].length;colunaMinas++){
+			   
+			   if(campoMinas[linhaMinas][colunaMinas] == 4){
+				   minas = minas + 1; 
+				  }//fim do IF
+			   }//fim for colunas
+			   }//fim for linhas	   		   
+	   //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	        System.out.println(minas);
 	        
 	    
 	       //for que exibe a matriz
+
 	       System.out.println("**-----Campo Minado-----**");
 	       System.out.println("**Escolha a linha e a coluna.**");
 	       System.out.println("**Cuidado para não acertar uma mina.**");
@@ -142,9 +158,9 @@ public class campoMinado
 		    System.out.print(linha + "     | ");
 		    for(int coluna=0;coluna<campoExibir[linha].length;coluna++){
 		        System.out.print(campoExibir[linha][coluna] + " ");
-		    }
+		    }//fim for colunas
 		    System.out.println(" ");
-		}
+		}//fim for linhas
         		System.out.println("        _________        ");
         		System.out.println("        0 1 2 3 4 Colunas");
         		
@@ -171,26 +187,27 @@ public class campoMinado
 		                       System.out.print(linhaMinas + "     | ");
 		                        for(colunaMinas=0;colunaMinas<campoMinas[linhaMinas].length;colunaMinas++){
 		                       System.out.print(campoMinas[linhaMinas][colunaMinas] + " ");
-		                          }
+		                          }//fim for colunas
 		                        System.out.println(" ");
-	                            	}
+	                            }//fim for linhas
                                 	System.out.println("        _________        ");
                                     System.out.println("        0 1 2 3 4 Colunas");
         		                break;
         		                
         		            }else{
         		               campoMinas[escolheLinha][escolheColuna] = 1;
-        		               // System.out.println("Minas|__________");
+							   tentativa++;
+        		              				 // System.out.println("Minas|__________");
 		                        for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
-		                       // System.out.print(linhaMinas + "     | ");
+		                      				 // System.out.print(linhaMinas + "     | ");
 		                        for(colunaMinas=0;colunaMinas<campoMinas[linhaMinas].length;colunaMinas++){
-		                       // System.out.print(campoMinas[linhaMinas][colunaMinas] + " ");
-		                            }
-		                            // System.out.println(" ");
-	                            	}
-        	                        //	System.out.println("        _________        ");
-        	                        //	System.out.println("        0 1 2 3 4 Colunas");
-        		                  }//fim if
+											// System.out.print(campoMinas[linhaMinas][colunaMinas] + " ");
+		                            }//fim for colunas
+		                            		// System.out.println(" ");
+	                            	}//fim for linhas
+        	                        		//	System.out.println("        _________        ");
+        	                       			 //	System.out.println("        0 1 2 3 4 Colunas");
+        		                  }//fim else/if
 	    
 	    
 	    
@@ -199,26 +216,43 @@ public class campoMinado
 		                    for(int linha=0; linha<campoExibir.length;linha++){
 		                    System.out.print(linha + "     | ");
 		                    for(int coluna=0;coluna<campoExibir[linha].length;coluna++){
-		        
 		                    System.out.print(campoExibir[linha][coluna] + " ");
 		                    campoExibir[escolheLinha][escolheColuna] = 1;
-		        
-		                    }
+		                    }//fim for colunas
 		                    System.out.println(" ");
-		    
-		    
-		                    }//fim for
+		                    }////fim for linhas
         		            System.out.println("        _________        ");
         		            System.out.println("        0 1 2 3 4 Colunas");
         		            
         		            
         		
-	}while(true);
+	}while(tentativa < minas);
 	input.close();
 
-}
+										//final do jogo no momento que o jogador terminou a roda.
+													
+										if(tentativa == minas){
+											  	System.out.println();
+								
+												    System.out.println("");	
+													System.out.println("");		
+													System.out.println("Você conseguiu!! Não pisou em nenhuma mina!");
+													System.out.println("Linha|__________");
+											for(linhaMinas=0; linhaMinas<campoMinas.length;linhaMinas++){
+													System.out.print(linhaMinas + "     | ");
+											for(colunaMinas=0;colunaMinas<campoMinas[linhaMinas].length;colunaMinas++){
+													System.out.print(campoMinas[linhaMinas][colunaMinas] + " ");
+												}//fim for colunas
+													System.out.println(" ");
+												}//fim for linhas
+													System.out.println("        _________        ");
+													System.out.println("        0 1 2 3 4 Colunas");
+											
+										}//fim if
+										mostrarMenu();
+}//fim da void começar jogo
 
-}
+}//fim da classe jogo
 
 
 
